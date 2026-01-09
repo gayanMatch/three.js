@@ -59,7 +59,8 @@ class SpriteSheetUVNode extends Node {
 
 		const { frameNode, uvNode, countNode } = this;
 
-		const { width, height } = countNode;
+		const width = countNode.x;
+		const height = countNode.y;
 
 		const frameNum = frameNode.mod( width.mul( height ) ).floor();
 
